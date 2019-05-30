@@ -33,9 +33,9 @@ def _prevent_print(function, params):
     :param function: The function in which to repress any prints to the terminal
     :param params: Parameters to feed into function
     """
-    sys.stdout = open(os.devnull, "w")
+#     sys.stdout = open(os.devnull, "w")
     function(**params)
-    sys.stdout = sys.__stdout__
+#     sys.stdout = sys.__stdout__
 
 
 def _assert_tensor_shape(tensor, shape, display_name):
